@@ -36,17 +36,20 @@ public class Deck {
 
         //Se despliega el menú
         System.out.println("Bienvenid@ :) ");
-        System.out.println(" \n Juego de pokers .com");
+
         do
         {
             try{
 
+                System.out.println(" \n ----Poker-sillo.com----");
+                System.out.println(" \n ----- Menú -----");
                 System.out.println("\n Selecciona una opción");
                 System.out.println("1 - Mezcla");
                 System.out.println("2 - Tomar una carta");
                 System.out.println("3 - Tomar carta al azar");
                 System.out.println("4 - Tomar 5 cartas");
-                System.out.println("5 - SALIR");
+                System.out.println("0 - SALIR");
+                System.out.println(" \n --------------");
                 opciones = leer.nextInt();
 
                 // Dependiendo de la opción se realizara lo que el ususario haya pedido
@@ -72,7 +75,7 @@ public class Deck {
                             System.out.println("\n Se acabaron las cartas, elije otra opción");
                         break;
 
-                    case 5:
+                    case 0:
                         System.out.println("\n Las Cartas:  ");
                         ban = 1;
                         break;
@@ -84,7 +87,7 @@ public class Deck {
 
                 }
 
-                //aquí se muestra la finalización cuando ya no tengamos cartas
+                //aquí se muestra el final cuando ya no tengamos cartas
                 if(Deck.size() == 0){
                     System.out.println("\n Ya no hay más");
                     System.out.println("FIN DEL JUEGO");
@@ -99,12 +102,12 @@ public class Deck {
                 break;
 
             }
-
-
         }while(ban == 0);
 
 
     }
+
+    //metodos a realizar para cada una de las opciones
 
     //Se mezclan las cartas
     public static void shuffle(ArrayList deck){
